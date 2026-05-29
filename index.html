@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harshil Sureja — Social Media Executive | Digital Marketing Specialist</title>
+  <meta name="description" content="Results-driven Social Media Executive with experience managing brand presence across Instagram, Facebook, LinkedIn, Twitter, and YouTube. Expert in Meta Ads, content strategy, and performance analytics." />
+  <meta name="keywords" content="social media executive, digital marketing specialist, Meta Ads, content strategy, brand management, Harshil Sureja, Gujarat" />
+  <meta name="author" content="Harshil Sureja" />
+  <meta property="og:title" content="Harshil Sureja — Social Media Executive & Digital Marketing Specialist" />
+  <meta property="og:description" content="Results-driven Social Media Executive specializing in Meta Ads, content creation, and multi-platform brand strategy." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎯</text></svg>" />
+</head>
+<body>
+
+  <!-- ===== LOADING SCREEN ===== -->
+  <div class="loader" id="loader">
+    <div class="loader-content">
+      <div class="loader-name">HS</div>
+      <div class="loader-bar"></div>
+    </div>
+  </div>
+
+  <!-- ===== PARTICLES ===== -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- ===== CUSTOM CURSOR ===== -->
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="cursor-outline" id="cursor-outline"></div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">Harshil<span>.</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" class="active">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact" class="nav-cta">Let's Talk</a></li>
+      </ul>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="nav-overlay"></div>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-shapes">
+      <div class="hero-shape hero-shape-1"></div>
+      <div class="hero-shape hero-shape-2"></div>
+      <div class="hero-shape hero-shape-3"></div>
+    </div>
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="dot"></span>
+          Available for opportunities
+        </div>
+        <h1 class="hero-title">
+          Hi, I'm<br />
+          <span class="highlight">Harshil Sureja</span>
+        </h1>
+        <div class="hero-typing" id="hero-typing">
+          <span id="typed-text"></span><span class="cursor">|</span>
+        </div>
+        <p class="hero-description">
+          Results-driven Social Media Executive with hands-on experience managing brand presence across 
+          Instagram, Facebook, LinkedIn, Twitter & YouTube. Turning creative briefs into data-backed content 
+          strategies that grow communities and drive measurable business results.
+        </p>
+        <div class="hero-actions">
+          <a href="#portfolio" class="btn btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" /></svg>
+            View My Work
+          </a>
+          <a href="https://wa.me/917284050706?text=Hi%20Harshil!%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20connect." class="btn btn-whatsapp" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp Me
+          </a>
+          <a href="image/Harshil_Sureja_Social-Media-Executive_Resume.pdf" class="btn btn-outline" download>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg>
+            Download CV
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-number" data-count="5">0+</div>
+            <div class="hero-stat-label">Platforms Managed</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-number" data-count="5">0+</div>
+            <div class="hero-stat-label">Clients Served</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-number" data-count="8.41">0</div>
+            <div class="hero-stat-label">CGPA (BCA)</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-avatar-wrapper">
+          <div class="hero-avatar-ring"></div>
+          <div class="hero-avatar-ring-2"></div>
+          <div class="hero-avatar">
+            <img src="image/personal_pic.jpeg" alt="Harshil Sureja — Social Media Executive" />
+          </div>
+          <div class="hero-float-badge">
+            <span class="badge-icon">📱</span>
+            <span>Meta Ads Expert</span>
+          </div>
+          <div class="hero-float-badge">
+            <span class="badge-icon">🎨</span>
+            <span>Content Creator</span>
+          </div>
+          <div class="hero-float-badge">
+            <span class="badge-icon">📈</span>
+            <span>Growth Strategy</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BRAND MARQUEE ===== -->
+  <div class="brand-strip">
+    <div class="brand-marquee" id="brand-marquee">
+      <span class="brand-marquee-item"><span class="dot"></span>Instagram</span>
+      <span class="brand-marquee-item"><span class="dot"></span>Facebook</span>
+      <span class="brand-marquee-item"><span class="dot"></span>LinkedIn</span>
+      <span class="brand-marquee-item"><span class="dot"></span>Twitter / X</span>
+      <span class="brand-marquee-item"><span class="dot"></span>YouTube</span>
+      <span class="brand-marquee-item"><span class="dot"></span>Meta Ads</span>
+      <span class="brand-marquee-item"><span class="dot"></span>Content Strategy</span>
+      <span class="brand-marquee-item"><span class="dot"></span>Canva</span>
+      <span class="brand-marquee-item"><span class="dot"></span>CapCut</span>
+      <span class="brand-marquee-item"><span class="dot"></span>CorelDRAW</span>
+      <!-- Duplicated for seamless loop -->
+      <span class="brand-marquee-item"><span class="dot"></span>Instagram</span>
+      <span class="brand-marquee-item"><span class="dot"></span>Facebook</span>
+      <span class="brand-marquee-item"><span class="dot"></span>LinkedIn</span>
+      <span class="brand-marquee-item"><span class="dot"></span>Twitter / X</span>
+      <span class="brand-marquee-item"><span class="dot"></span>YouTube</span>
+      <span class="brand-marquee-item"><span class="dot"></span>Meta Ads</span>
+      <span class="brand-marquee-item"><span class="dot"></span>Content Strategy</span>
+      <span class="brand-marquee-item"><span class="dot"></span>Canva</span>
+      <span class="brand-marquee-item"><span class="dot"></span>CapCut</span>
+      <span class="brand-marquee-item"><span class="dot"></span>CorelDRAW</span>
+    </div>
+  </div>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">About Me</div>
+        <h2 class="section-title">Crafting Digital Stories<br />That <span class="text-gradient">Resonate</span></h2>
+        <p class="section-subtitle">Turning creative briefs into data-backed strategies that grow communities and drive results.</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-image-wrapper reveal-left">
+          <div class="about-image">
+            <img src="image/about-workspace.png" alt="Harshil Sureja's creative workspace — Social Media & Digital Marketing" />
+          </div>
+          <div class="about-image-decoration"></div>
+          <div class="about-experience-badge">
+            <div class="number">5+</div>
+            <div class="label">Clients</div>
+          </div>
+        </div>
+        <div class="about-content reveal-right">
+          <h3>I'm Harshil, a <span>Social Media Executive</span></h3>
+          <p>
+            Based in Valsad, Gujarat — I'm a results-driven Social Media Executive & Digital Marketing Specialist
+            with hands-on experience managing brand presence across Instagram, Facebook, LinkedIn, Twitter, and YouTube.
+          </p>
+          <p>
+            I've partnered with 5+ small businesses and startups across Gujarat, independently managing social media 
+            strategy, content creation, and paid advertising. From planning Meta Ads campaigns to producing reels, 
+            carousels, and ad creatives — I bring creativity and analytics together to deliver measurable growth.
+          </p>
+          <div class="about-highlights stagger-children">
+            <div class="about-highlight-item reveal">
+              <div class="icon">📊</div>
+              <div class="text">Meta Ads & Campaigns</div>
+            </div>
+            <div class="about-highlight-item reveal">
+              <div class="icon">🎯</div>
+              <div class="text">Lead Generation</div>
+            </div>
+            <div class="about-highlight-item reveal">
+              <div class="icon">🎬</div>
+              <div class="text">Reels & Carousel Production</div>
+            </div>
+            <div class="about-highlight-item reveal">
+              <div class="icon">📈</div>
+              <div class="text">Performance Analytics</div>
+            </div>
+            <div class="about-highlight-item reveal">
+              <div class="icon">✍️</div>
+              <div class="text">Copywriting & Captions</div>
+            </div>
+            <div class="about-highlight-item reveal">
+              <div class="icon">🤖</div>
+              <div class="text">AI Tools (GPT, Gemini, Claude)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== KEY ACHIEVEMENTS ===== -->
+  <section class="section" id="achievements" style="background: var(--color-surface); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Impact</div>
+        <h2 class="section-title">Key <span class="text-gradient">Achievements</span></h2>
+      </div>
+      <div class="services-grid stagger-children grid-2-col">
+        <div class="service-card reveal" style="text-align:left;">
+          <div class="service-icon">🚀</div>
+          <h3>5 Platforms, Consistent Growth</h3>
+          <p>Managed 5 social media platforms simultaneously at AutoIQ, driving consistent daily content output and measurable growth in page reach and engagement rate within a 3-month tenure.</p>
+        </div>
+        <div class="service-card reveal" style="text-align:left;">
+          <div class="service-icon">🎯</div>
+          <h3>Full-Funnel Meta Ads</h3>
+          <p>Delivered full-funnel Meta Ads campaigns (reach, engagement, lead generation) for multiple freelance clients, continuously optimizing for improved cost-per-result.</p>
+        </div>
+        <div class="service-card reveal" style="text-align:left;">
+          <div class="service-icon">📱</div>
+          <h3>5+ Client Accounts Managed</h3>
+          <p>Built and executed content calendars for Instagram and Facebook across 5+ client accounts, producing reels, carousels, and ad creatives that expanded audience size.</p>
+        </div>
+        <div class="service-card reveal" style="text-align:left;">
+          <div class="service-icon">📊</div>
+          <h3>Data-Driven Reporting</h3>
+          <p>Produced monthly analytics reports using Meta Business Suite and YouTube Studio, translating performance data into actionable strategy improvements for clients.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE SECTION ===== -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Career</div>
+        <h2 class="section-title">Professional <span class="text-gradient">Experience</span></h2>
+        <p class="section-subtitle">From corporate environments to freelance partnerships, building digital success stories.</p>
+      </div>
+
+      <!-- Timeline -->
+      <div class="experience-timeline">
+        <!-- Experience 1 -->
+        <div class="timeline-item reveal-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3>Social Media Executive</h3>
+                <p class="timeline-company">AutoIQ Vehicle Info Pvt. Ltd. — Surat, Gujarat</p>
+              </div>
+              <span class="timeline-date">Mar 2026 — May 2026</span>
+            </div>
+            <ul class="timeline-list">
+              <li>Managed daily content planning, scheduling, and posting across Instagram, Facebook, LinkedIn, Twitter, and YouTube</li>
+              <li>Collaborated with the design team to ideate and produce reels, carousel posts, and promotional creatives</li>
+              <li>Planned and executed multi-platform social media campaigns focused on reach, engagement, and brand awareness</li>
+              <li>Monitored and analyzed key metrics using Meta Business Suite and YouTube Studio</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Experience 2 -->
+        <div class="timeline-item reveal-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3>Freelance Digital Marketing Specialist</h3>
+                <p class="timeline-company">Self-Employed — Gujarat, India</p>
+              </div>
+              <span class="timeline-date">2025 — Present</span>
+            </div>
+            <ul class="timeline-list">
+              <li>Partnered with 5+ small businesses and startups across Gujarat, managing social media strategy end-to-end</li>
+              <li>Built structured content calendars for Instagram and Facebook — reels, stories, carousels, and ad creatives</li>
+              <li>Designed and managed Meta Ads campaigns targeting reach, engagement, and lead generation goals</li>
+              <li>Delivered monthly performance reports with insights and next-step recommendations</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PORTFOLIO SECTION ===== -->
+  <section class="section" id="portfolio" style="background: var(--color-bg-alt);">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Portfolio</div>
+        <h2 class="section-title">Creative <span class="text-gradient">Showcase</span></h2>
+        <p class="section-subtitle">A curated collection of brand designs, social media creatives, and logo projects.</p>
+      </div>
+
+      <!-- Portfolio Filter Tabs -->
+      <div class="portfolio-filters reveal" id="portfolio-filters">
+        <button class="filter-btn active" data-filter="all">All Work</button>
+        <button class="filter-btn" data-filter="poster">Poster Design</button>
+        <button class="filter-btn" data-filter="logo">Logo Design</button>
+        <button class="filter-btn" data-filter="social">Social Media</button>
+      </div>
+
+      <div class="portfolio-grid stagger-children" id="portfolio-grid">
+        <!-- Project 1: Doctor na Gola — POSTER -->
+        <div class="portfolio-card reveal" data-category="poster" data-lightbox="0">
+          <div class="portfolio-card-image">
+            <img src="image/WhatsApp Image 2026-05-29 at 7.17.16 PM.jpeg" alt="Doctor na Gola — Premium food brand social media poster design" loading="lazy" />
+            <div class="portfolio-card-overlay">
+              <div class="portfolio-card-overlay-content">
+                <h4>Doctor na Gola</h4>
+                <p>Premium food brand poster with elegant typography & product showcase</p>
+              </div>
+            </div>
+            <div class="portfolio-view-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /><line x1="11" y1="8" x2="11" y2="14" /><line x1="8" y1="11" x2="14" y2="11" /></svg>
+            </div>
+          </div>
+          <div class="portfolio-card-info">
+            <h3>Doctor na Gola — Brand Poster</h3>
+            <span class="portfolio-tag">🖼️ Poster Design</span>
+          </div>
+        </div>
+
+        <!-- Project 2: Kalamay Design Studio — LOGO -->
+        <div class="portfolio-card reveal" data-category="logo" data-lightbox="1">
+          <div class="portfolio-card-image">
+            <img src="image/WhatsApp Image 2026-05-29 at 7.19.26 PM.jpeg" alt="Kalamay Design Studio — Elegant interior design studio logo" loading="lazy" />
+            <div class="portfolio-card-overlay">
+              <div class="portfolio-card-overlay-content">
+                <h4>Kalamay Design Studio</h4>
+                <p>Sophisticated luxury logo with architectural elements for an interior design studio</p>
+              </div>
+            </div>
+            <div class="portfolio-view-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /><line x1="11" y1="8" x2="11" y2="14" /><line x1="8" y1="11" x2="14" y2="11" /></svg>
+            </div>
+          </div>
+          <div class="portfolio-card-info">
+            <h3>Kalamay Design Studio — Logo</h3>
+            <span class="portfolio-tag">✏️ Logo Design</span>
+          </div>
+        </div>
+
+        <!-- Project 3: Vizoary Innovation — LOGO -->
+        <div class="portfolio-card reveal" data-category="logo" data-lightbox="2">
+          <div class="portfolio-card-image">
+            <img src="image/WhatsApp Image 2026-05-29 at 7.20.03 PM.jpeg" alt="Vizoary Innovation — Modern tech company logo with gradient design" loading="lazy" />
+            <div class="portfolio-card-overlay">
+              <div class="portfolio-card-overlay-content">
+                <h4>Vizoary Innovation</h4>
+                <p>Modern tech brand identity — gradient design with "Where Design Meets Data & AI" tagline</p>
+              </div>
+            </div>
+            <div class="portfolio-view-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /><line x1="11" y1="8" x2="11" y2="14" /><line x1="8" y1="11" x2="14" y2="11" /></svg>
+            </div>
+          </div>
+          <div class="portfolio-card-info">
+            <h3>Vizoary Innovation — Logo & Brand</h3>
+            <span class="portfolio-tag">✏️ Logo Design</span>
+          </div>
+        </div>
+
+        <!-- Project 4: Grink — LOGO -->
+        <div class="portfolio-card reveal" data-category="logo" data-lightbox="3">
+          <div class="portfolio-card-image">
+            <img src="image/WhatsApp Image 2026-05-29 at 7.20.27 PM.jpeg" alt="Grink — Natural beverage brand logo with organic green design" loading="lazy" />
+            <div class="portfolio-card-overlay">
+              <div class="portfolio-card-overlay-content">
+                <h4>Grink</h4>
+                <p>Vibrant natural beverage brand logo with organic leaf motif and fresh green palette</p>
+              </div>
+            </div>
+            <div class="portfolio-view-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /><line x1="11" y1="8" x2="11" y2="14" /><line x1="8" y1="11" x2="14" y2="11" /></svg>
+            </div>
+          </div>
+          <div class="portfolio-card-info">
+            <h3>Grink — Brand Logo</h3>
+            <span class="portfolio-tag">✏️ Logo Design</span>
+          </div>
+        </div>
+
+        <!-- Project 5: Apna Indian Bajar Groceries — LOGO -->
+        <div class="portfolio-card reveal" data-category="logo" data-lightbox="4">
+          <div class="portfolio-card-image">
+            <img src="image/WhatsApp Image 2026-05-29 at 7.24.15 PM.jpeg" alt="Apna Indian Bajar Groceries — Grocery store logo design" loading="lazy" />
+            <div class="portfolio-card-overlay">
+              <div class="portfolio-card-overlay-content">
+                <h4>Apna Indian Bajar</h4>
+                <p>Clean grocery store logo with shopping cart icon and vibrant produce illustration</p>
+              </div>
+            </div>
+            <div class="portfolio-view-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /><line x1="11" y1="8" x2="11" y2="14" /><line x1="8" y1="11" x2="14" y2="11" /></svg>
+            </div>
+          </div>
+          <div class="portfolio-card-info">
+            <h3>Apna Indian Bajar — Logo</h3>
+            <span class="portfolio-tag">✏️ Logo Design</span>
+          </div>
+        </div>
+
+        <!-- Project 6: Om Consultancy — POSTER/SOCIAL -->
+        <div class="portfolio-card reveal" data-category="social" data-lightbox="5">
+          <div class="portfolio-card-image">
+            <img src="image/WhatsApp Image 2026-05-29 at 7.24.59 PM.jpeg" alt="Om Consultancy — Home Loan social media poster" loading="lazy" />
+            <div class="portfolio-card-overlay">
+              <div class="portfolio-card-overlay-content">
+                <h4>Om Consultancy</h4>
+                <p>Home loan services social media ad — multi-language design with professional layout</p>
+              </div>
+            </div>
+            <div class="portfolio-view-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /><line x1="11" y1="8" x2="11" y2="14" /><line x1="8" y1="11" x2="14" y2="11" /></svg>
+            </div>
+          </div>
+          <div class="portfolio-card-info">
+            <h3>Om Consultancy — Social Media Ad</h3>
+            <span class="portfolio-tag">📱 Social Media</span>
+          </div>
+        </div>
+
+        <!-- Project 7: Hardik Roleshiya & Company — POSTER/SOCIAL -->
+        <div class="portfolio-card reveal" data-category="social" data-lightbox="6">
+          <div class="portfolio-card-image">
+            <img src="image/WhatsApp Image 2026-05-29 at 7.33.01 PM.jpeg" alt="Hardik Roleshiya & Company — Tax Consultant social media poster" loading="lazy" />
+            <div class="portfolio-card-overlay">
+              <div class="portfolio-card-overlay-content">
+                <h4>Hardik Roleshiya & Company</h4>
+                <p>Professional accountant & tax consultant promotional poster with service highlights</p>
+              </div>
+            </div>
+            <div class="portfolio-view-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /><line x1="11" y1="8" x2="11" y2="14" /><line x1="8" y1="11" x2="14" y2="11" /></svg>
+            </div>
+          </div>
+          <div class="portfolio-card-info">
+            <h3>Hardik Roleshiya & Co. — Social Ad</h3>
+            <span class="portfolio-tag">📱 Social Media</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="portfolio-cta reveal" style="text-align: center; margin-top: var(--space-4xl);">
+        <p style="color: var(--color-text-muted); margin-bottom: var(--space-md); font-size: 1.1rem;">Want to see more of my creative work?</p>
+        <a href="https://www.instagram.com/vizoary.innovation/" target="_blank" rel="noopener" class="btn btn-outline" style="border-color: var(--color-accent); color: var(--color-accent);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" /><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" /></svg>
+          View Full Portfolio on Instagram
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES SECTION ===== -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">What I Do</div>
+        <h2 class="section-title">Services I <span class="text-gradient">Offer</span></h2>
+        <p class="section-subtitle">Comprehensive social media & digital marketing solutions for your brand.</p>
+      </div>
+      <div class="services-grid stagger-children">
+        <div class="service-card reveal">
+          <div class="service-icon">📱</div>
+          <h3>Social Media Management</h3>
+          <p>End-to-end management across Instagram, Facebook, LinkedIn, Twitter & YouTube — content planning, scheduling, community engagement, and growth tracking.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">🎨</div>
+          <h3>Poster & Creative Design</h3>
+          <p>Eye-catching social media posters, brand creatives, promotional graphics, and visual content designed to capture attention and drive engagement.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">✏️</div>
+          <h3>Logo & Brand Identity</h3>
+          <p>Professional logo design and complete brand identity packages — from visual language and color palettes to consistent brand guidelines.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">📈</div>
+          <h3>Meta Ads & Campaigns</h3>
+          <p>Full-funnel Meta Ads campaigns — reach, engagement, and lead generation. Continuous A/B testing and optimization for improved cost-per-result.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">🎬</div>
+          <h3>Reels & Video Content</h3>
+          <p>Scroll-stopping Instagram Reels, carousel posts, stories, and video content using Canva and CapCut for maximum engagement.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">📊</div>
+          <h3>Analytics & Reporting</h3>
+          <p>Monthly performance reports using Meta Business Suite and YouTube Studio with actionable insights and optimization recommendations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS SECTION ===== -->
+  <section class="section" id="skills" style="background: var(--color-bg-alt);">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Expertise</div>
+        <h2 class="section-title">Skills & <span class="text-gradient">Tools</span></h2>
+        <p class="section-subtitle">A blend of creative thinking, technical proficiency, and analytical capability.</p>
+      </div>
+      <div class="skills-wrapper">
+        <div class="skills-content reveal-left">
+          <h3>Core Competencies</h3>
+          <p>Multi-platform expertise with daily hands-on experience in content, community management, and paid campaigns.</p>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span>Social Media Marketing</span>
+                <span class="percentage">95%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" style="--fill-width: 95%"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span>Meta Ads & Paid Campaigns</span>
+                <span class="percentage">90%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" style="--fill-width: 90%"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span>Content Strategy & Copywriting</span>
+                <span class="percentage">88%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" style="--fill-width: 88%"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span>Graphic & Logo Design</span>
+                <span class="percentage">85%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" style="--fill-width: 85%"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span>Analytics & Performance Reporting</span>
+                <span class="percentage">82%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" style="--fill-width: 82%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="skills-tools-column reveal-right">
+          <h3>Tools & Platforms</h3>
+          <p>Proficient in industry-standard tools for design, ads, analytics, and AI.</p>
+          <div class="tools-grid stagger-children">
+            <div class="tool-item reveal">
+              <span class="tool-icon">🎨</span>
+              <span class="tool-name">Canva</span>
+            </div>
+            <div class="tool-item reveal">
+              <span class="tool-icon">🎬</span>
+              <span class="tool-name">CapCut</span>
+            </div>
+            <div class="tool-item reveal">
+              <span class="tool-icon">✏️</span>
+              <span class="tool-name">CorelDRAW</span>
+            </div>
+            <div class="tool-item reveal">
+              <span class="tool-icon">📊</span>
+              <span class="tool-name">Meta Business Suite</span>
+            </div>
+            <div class="tool-item reveal">
+              <span class="tool-icon">📈</span>
+              <span class="tool-name">Meta Ads Manager</span>
+            </div>
+            <div class="tool-item reveal">
+              <span class="tool-icon">▶️</span>
+              <span class="tool-name">YouTube Studio</span>
+            </div>
+            <div class="tool-item reveal">
+              <span class="tool-icon">🤖</span>
+              <span class="tool-name">ChatGPT</span>
+            </div>
+            <div class="tool-item reveal">
+              <span class="tool-icon">✨</span>
+              <span class="tool-name">Gemini AI</span>
+            </div>
+            <div class="tool-item reveal">
+              <span class="tool-icon">🧠</span>
+              <span class="tool-name">Claude AI</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EDUCATION & CERTIFICATIONS ===== -->
+  <section class="section" id="education">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Academics</div>
+        <h2 class="section-title">Education & <span class="text-gradient">Certifications</span></h2>
+      </div>
+      <div class="education-grid">
+        <!-- Education -->
+        <div class="education-card reveal-left">
+          <div class="edu-icon">🎓</div>
+          <div class="edu-content">
+            <span class="edu-date">2023 — 2026</span>
+            <h3>Bachelor of Computer Applications (Web Development)</h3>
+            <p class="edu-institution">Dolat-Usha Institute of Applied Science (VNSGU), Valsad</p>
+            <div class="edu-badge">CGPA: 8.41</div>
+          </div>
+        </div>
+        <div class="education-card reveal-right">
+          <div class="edu-icon">📚</div>
+          <div class="edu-content">
+            <span class="edu-date">2023</span>
+            <h3>Higher Secondary Certificate (HSC)</h3>
+            <p class="edu-institution">Gujarat Board</p>
+            <div class="edu-badge">Percentage: 75%</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certifications -->
+      <div class="section-header reveal" style="margin-top: var(--space-4xl);">
+        <div class="section-label">Certifications</div>
+      </div>
+      <div class="certifications-grid stagger-children">
+        <div class="cert-card reveal">
+          <div class="cert-icon">🛡️</div>
+          <h4>Cybersecurity Fundamentals</h4>
+          <p>IBM (Online Certification)</p>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-icon">🔒</div>
+          <h4>Cyber Security Certification</h4>
+          <p>CSRBOX</p>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-icon">📱</div>
+          <h4>Social Media Marketing</h4>
+          <p>Self-directed with hands-on implementation</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CORE STRENGTHS ===== -->
+  <section class="section" style="background: var(--color-bg-alt);">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Why Me</div>
+        <h2 class="section-title">Core <span class="text-gradient">Strengths</span></h2>
+      </div>
+      <div class="services-grid stagger-children grid-2-col">
+        <div class="service-card reveal" style="text-align:left;">
+          <div class="service-icon">🌐</div>
+          <h3>Multi-Platform Expert</h3>
+          <p>Daily hands-on experience across 5 major social networks — Instagram, Facebook, LinkedIn, Twitter/X, and YouTube — in content, community, and campaigns.</p>
+        </div>
+        <div class="service-card reveal" style="text-align:left;">
+          <div class="service-icon">🎬</div>
+          <h3>Creative Content Producer</h3>
+          <p>Able to translate simple briefs into engaging reels, carousels, and ad creatives that generate likes, shares, and saves for measurable impact.</p>
+        </div>
+        <div class="service-card reveal" style="text-align:left;">
+          <div class="service-icon">📊</div>
+          <h3>Data-Driven Mindset</h3>
+          <p>Comfortable with analytics tools and translating performance metrics into actionable content improvements and strategy refinements.</p>
+        </div>
+        <div class="service-card reveal" style="text-align:left;">
+          <div class="service-icon">🔥</div>
+          <h3>Trend-Aware & Adaptive</h3>
+          <p>Consistently explores new platform features, algorithm updates, and content formats to keep strategies current, competitive, and high-performing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RESUME DOWNLOAD ===== -->
+  <section class="section" id="resume">
+    <div class="container">
+      <div class="resume-card reveal-scale">
+        <div class="resume-icon">📄</div>
+        <h3>Download My Resume</h3>
+        <p>Get my complete resume with detailed experience, education, certifications, and skills to learn more about my professional journey.</p>
+        <div class="resume-actions">
+          <a href="image/Harshil_Sureja_Social-Media-Executive_Resume.pdf" class="btn btn-primary" download>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg>
+            Download Resume (PDF)
+          </a>
+          <a href="https://wa.me/917284050706?text=Hi%20Harshil!%20I%20reviewed%20your%20resume%20and%20would%20like%20to%20discuss%20an%20opportunity." class="btn btn-whatsapp" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Discuss Opportunity
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="section" id="contact" style="background: var(--color-bg-alt);">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Get In Touch</div>
+        <h2 class="section-title">Let's <span class="text-gradient">Connect</span></h2>
+        <p class="section-subtitle">Have a project in mind or want to discuss an opportunity? I'd love to hear from you.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+          <h3>Contact Information</h3>
+          <p>Feel free to reach out through any of these channels. I'm always open to new projects, creative ideas, or career opportunities.</p>
+          <div class="contact-items">
+            <div class="contact-item">
+              <div class="contact-item-icon">👤</div>
+              <div class="contact-item-text">
+                <div class="label">Name</div>
+                <div class="value">Harshil Sureja</div>
+              </div>
+            </div>
+            <a href="https://wa.me/917284050706" target="_blank" rel="noopener" class="contact-item">
+              <div class="contact-item-icon">💬</div>
+              <div class="contact-item-text">
+                <div class="label">WhatsApp</div>
+                <div class="value">+91 72840 50706</div>
+              </div>
+            </a>
+            <div class="contact-item">
+              <div class="contact-item-icon">📍</div>
+              <div class="contact-item-text">
+                <div class="label">Location</div>
+                <div class="value">Valsad, Gujarat</div>
+              </div>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/harshilsureja184/" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z" /><rect x="2" y="9" width="4" height="12" /><circle cx="4" cy="4" r="2" /></svg>
+            </a>
+            <a href="https://www.instagram.com/vizoary.innovation/" class="social-link" aria-label="Instagram" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" /><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" /></svg>
+            </a>
+          </div>
+          <div style="margin-top: var(--space-lg); padding-top: var(--space-md); border-top: 1px solid var(--color-border);">
+            <p style="color: var(--color-text-muted); font-size: 0.95rem; margin-bottom: var(--space-xs);">Looking for more designs?</p>
+            <a href="https://www.instagram.com/vizoary.innovation/" target="_blank" rel="noopener" style="color: var(--color-accent); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 5px;">
+              Check my Instagram Portfolio ↗
+            </a>
+          </div>
+        </div>
+        <div class="contact-form-wrapper reveal-right">
+          <form class="contact-form" id="contact-form">
+            <div class="form-group">
+              <input type="text" id="form-name" name="name" placeholder=" " required />
+              <label for="form-name">Your Name</label>
+            </div>
+            <div class="form-group">
+              <input type="email" id="form-email" name="email" placeholder=" " required />
+              <label for="form-email">Email Address</label>
+            </div>
+            <div class="form-group">
+              <input type="text" id="form-subject" name="subject" placeholder=" " />
+              <label for="form-subject">Subject</label>
+            </div>
+            <div class="form-group">
+              <textarea id="form-message" name="message" placeholder=" " required></textarea>
+              <label for="form-message">Your Message</label>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13" /><polygon points="22 2 15 22 11 13 2 9 22 2" /></svg>
+              Send Message via WhatsApp
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">Harshil<span>.</span></div>
+        <div class="footer-text">&copy; 2026 Harshil Sureja. All rights reserved.</div>
+        <div class="footer-links">
+          <a href="#about">About</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="https://linkedin.com/in/harshilsureja184" target="_blank">LinkedIn</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== LIGHTBOX ===== -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightbox-close">&times;</button>
+    <div class="lightbox-content">
+      <img src="" alt="Portfolio work preview" id="lightbox-img" />
+    </div>
+    <div class="lightbox-info">
+      <h4 id="lightbox-title"></h4>
+      <p id="lightbox-desc"></p>
+    </div>
+  </div>
+
+  <!-- ===== WHATSAPP FLOATING BUTTON ===== -->
+  <a href="https://wa.me/917284050706?text=Hi%20Harshil!%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20connect." class="whatsapp-float" id="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span class="whatsapp-tooltip">Chat with me!</span>
+  </a>
+
+  <!-- ===== BACK TO TOP ===== -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15" /></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
