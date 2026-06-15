@@ -214,11 +214,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const typedTextEl = document.getElementById('typed-text');
   const phrases = [
     'Social Media Executive',
-    'Digital Marketing Specialist',
-    'Content Creator',
-    'Meta Ads Expert',
-    'Brand Strategist',
-    'Visual Storyteller'
+    'Digital Marketing Executive',
+    'Content Creator'
   ];
   let phraseIndex = 0;
   let charIndex = 0;
@@ -486,7 +483,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ===== RIPPLE EFFECT ON BUTTONS =====
   document.querySelectorAll('.btn').forEach(button => {
-    button.addEventListener('click', function(e) {
+    button.addEventListener('click', function (e) {
       const ripple = document.createElement('span');
       const rect = this.getBoundingClientRect();
       const size = Math.max(rect.width, rect.height);
@@ -574,31 +571,128 @@ document.addEventListener('DOMContentLoaded', () => {
     progressBar.style.width = scrollPercent + '%';
   });
 
-  // ===== PORTFOLIO FILTER TABS =====
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const portfolioGrid = document.getElementById('portfolio-grid');
-  const allPortfolioCards = document.querySelectorAll('.portfolio-card');
+  // ===== LOGO SLIDESHOW (auto-rotates every 2s, slide from left) =====
+  const logoSlideshow = document.getElementById('logo-slideshow');
+  if (logoSlideshow) {
+    const slides = logoSlideshow.querySelectorAll('.pf-logo-slide');
+    const dots = logoSlideshow.querySelectorAll('.pf-logo-dot');
+    let currentSlide = 0;
+    let slideshowInterval = null;
 
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      // Update active button
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
+    function goToSlide(nextIndex) {
+      // Remove active from current → CSS animates it back to translateX(-60px) = slide out left
+      slides[currentSlide].classList.remove('active');
 
-      const filter = btn.getAttribute('data-filter');
+      // Add active to next → CSS animates it from translateX(-60px) to 0 = slide in from left
+      slides[nextIndex].classList.add('active');
 
-      allPortfolioCards.forEach(card => {
-        const category = card.getAttribute('data-category');
-        if (filter === 'all' || category === filter) {
-          card.classList.remove('hidden');
-          card.style.position = '';
-          card.style.visibility = '';
-        } else {
-          card.classList.add('hidden');
+      // Update dots
+      dots[currentSlide].classList.remove('active');
+      dots[nextIndex].classList.add('active');
+
+      currentSlide = nextIndex;
+    }
+
+    function nextSlide() {
+      const next = (currentSlide + 1) % slides.length;
+      goToSlide(next);
+    }
+
+    function startSlideshow() {
+      slideshowInterval = setInterval(nextSlide, 2000);
+    }
+
+    function stopSlideshow() {
+      clearInterval(slideshowInterval);
+    }
+
+    // Dot click navigation
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        const targetIndex = parseInt(dot.getAttribute('data-dot'));
+        if (targetIndex !== currentSlide) {
+          stopSlideshow();
+          goToSlide(targetIndex);
+          startSlideshow();
         }
       });
     });
-  });
+
+    // Pause on hover
+    logoSlideshow.addEventListener('mouseenter', stopSlideshow);
+    logoSlideshow.addEventListener('mouseleave', startSlideshow);
+
+    // Start when section is visible
+    const slideshowObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          startSlideshow();
+        } else {
+          stopSlideshow();
+        }
+      });
+    }, { threshold: 0.3 });
+
+    slideshowObserver.observe(logoSlideshow);
+  }
+
+  // ===== POSTER SLIDESHOW (auto-rotates every 2s, slide from left) =====
+  const posterSlideshow = document.getElementById('poster-slideshow');
+  if (posterSlideshow) {
+    const pSlides = posterSlideshow.querySelectorAll('.pf-poster-slide');
+    const pDots = posterSlideshow.querySelectorAll('.pf-poster-dot');
+    let pCurrentSlide = 0;
+    let pSlideshowInterval = null;
+
+    function goToPosterSlide(nextIndex) {
+      pSlides[pCurrentSlide].classList.remove('active');
+      pSlides[nextIndex].classList.add('active');
+
+      pDots[pCurrentSlide].classList.remove('active');
+      pDots[nextIndex].classList.add('active');
+
+      pCurrentSlide = nextIndex;
+    }
+
+    function nextPosterSlide() {
+      const next = (pCurrentSlide + 1) % pSlides.length;
+      goToPosterSlide(next);
+    }
+
+    function startPosterSlideshow() {
+      pSlideshowInterval = setInterval(nextPosterSlide, 2000);
+    }
+
+    function stopPosterSlideshow() {
+      clearInterval(pSlideshowInterval);
+    }
+
+    pDots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        const targetIndex = parseInt(dot.getAttribute('data-dot'));
+        if (targetIndex !== pCurrentSlide) {
+          stopPosterSlideshow();
+          goToPosterSlide(targetIndex);
+          startPosterSlideshow();
+        }
+      });
+    });
+
+    posterSlideshow.addEventListener('mouseenter', stopPosterSlideshow);
+    posterSlideshow.addEventListener('mouseleave', startPosterSlideshow);
+
+    const pSlideshowObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          startPosterSlideshow();
+        } else {
+          stopPosterSlideshow();
+        }
+      });
+    }, { threshold: 0.3 });
+
+    pSlideshowObserver.observe(posterSlideshow);
+  }
 
 });
 
