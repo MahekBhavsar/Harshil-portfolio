@@ -214,8 +214,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const typedTextEl = document.getElementById('typed-text');
   const phrases = [
     'Social Media Executive',
-    'Digital Marketing Executive',
-    'Content Creator'
+    'Digital Marketing & Content Specialist',
+    'Freelance Website & Creative Specialist'
   ];
   let phraseIndex = 0;
   let charIndex = 0;
@@ -272,7 +272,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (entry.isIntersecting) {
         const target = entry.target;
         const count = parseFloat(target.getAttribute('data-count'));
-        animateCounter(target, count);
+        if (!isNaN(count)) animateCounter(target, count);
         counterObserver.unobserve(target);
       }
     });
@@ -598,7 +598,13 @@ document.addEventListener('DOMContentLoaded', () => {
       goToSlide(next);
     }
 
+    let hovered = false;
+    let visible = false;
+
+    // Always clear first so a second start() can never stack a duplicate timer
     function startSlideshow() {
+      clearInterval(slideshowInterval);
+      if (hovered || !visible || document.hidden) return;
       slideshowInterval = setInterval(nextSlide, 2000);
     }
 
@@ -619,17 +625,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Pause on hover
-    logoSlideshow.addEventListener('mouseenter', stopSlideshow);
-    logoSlideshow.addEventListener('mouseleave', startSlideshow);
+    logoSlideshow.addEventListener('mouseenter', () => { hovered = true; stopSlideshow(); });
+    logoSlideshow.addEventListener('mouseleave', () => { hovered = false; startSlideshow(); });
+    document.addEventListener('visibilitychange', startSlideshow);
 
     // Start when section is visible
     const slideshowObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          startSlideshow();
-        } else {
-          stopSlideshow();
-        }
+        visible = entry.isIntersecting;
+        startSlideshow();
       });
     }, { threshold: 0.3 });
 
@@ -659,7 +663,13 @@ document.addEventListener('DOMContentLoaded', () => {
       goToPosterSlide(next);
     }
 
+    let hovered = false;
+    let visible = false;
+
+    // Always clear first so a second start() can never stack a duplicate timer
     function startPosterSlideshow() {
+      clearInterval(pSlideshowInterval);
+      if (hovered || !visible || document.hidden) return;
       pSlideshowInterval = setInterval(nextPosterSlide, 2000);
     }
 
@@ -678,16 +688,14 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    posterSlideshow.addEventListener('mouseenter', stopPosterSlideshow);
-    posterSlideshow.addEventListener('mouseleave', startPosterSlideshow);
+    posterSlideshow.addEventListener('mouseenter', () => { hovered = true; stopPosterSlideshow(); });
+    posterSlideshow.addEventListener('mouseleave', () => { hovered = false; startPosterSlideshow(); });
+    document.addEventListener('visibilitychange', startPosterSlideshow);
 
     const pSlideshowObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          startPosterSlideshow();
-        } else {
-          stopPosterSlideshow();
-        }
+        visible = entry.isIntersecting;
+        startPosterSlideshow();
       });
     }, { threshold: 0.3 });
 
@@ -696,3 +704,51 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
+
+// ===== TOOLS FILTER =====
+(function () {
+  const chips = document.querySelectorAll('.tools-chip');
+  const tiles = document.querySelectorAll('.tool-tile');
+  if (!chips.length) return;
+  chips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      const f = chip.dataset.filter;
+      chips.forEach(c => {
+        const on = c === chip;
+        c.classList.toggle('active', on);
+        c.setAttribute('aria-pressed', String(on));
+      });
+      tiles.forEach(t => {
+        const show = f === 'all' || t.dataset.cat === f;
+        t.classList.toggle('is-hidden', !show);
+        if (show) { t.style.animation = 'none'; void t.offsetWidth; t.style.animation = ''; }
+      });
+    });
+  });
+})();
+
+// ===== HIDE HEADER ON SCROLL DOWN, SHOW ON SCROLL UP =====
+(function () {
+  const navbar = document.getElementById('navbar');
+  if (!navbar) return;
+  let lastY = window.scrollY;
+  let ticking = false;
+  function update() {
+    const y = window.scrollY;
+    const menuOpen = document.body.classList.contains('menu-open') || document.getElementById('nav-links')?.classList.contains('active');
+    if (menuOpen || y < 80) {
+      navbar.classList.remove('nav-hidden');
+    } else if (y > lastY + 6) {
+      navbar.classList.add('nav-hidden');
+    } else if (y < lastY - 6) {
+      navbar.classList.remove('nav-hidden');
+    }
+    if (Math.abs(y - lastY) > 6) lastY = y;
+    ticking = false;
+  }
+  window.addEventListener('scroll', () => {
+    if (!ticking) { ticking = true; requestAnimationFrame(update); }
+  }, { passive: true });
+  // keyboard focus inside the header always reveals it
+  navbar.addEventListener('focusin', () => navbar.classList.remove('nav-hidden'));
+})();
